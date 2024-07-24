@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class Demo
+{
+    public static void main(String[] args)
+    {
+        Scanner input = new Scanner(System.in);
+
+        String str = input.next() ;
+
+        char major = str.charAt(0);
+        char year = str.charAt(1) ;
+
+        if(major == 'M')
+            System.out.print("Mathmatics ");
+
+        else if(major == 'C')
+            System.out.print("Computer Science ");
+
+        else if (major == 'I')
+            System.out.print("Information Technology");
+
+        else{
+            System.out.print("Invalid Input");
+            System.exit(0);
+        }
+
+        if(year == '1')
+            System.out.print("Freshman");
+
+        else if (year == '2')
+            System.out.print("Sophomore");
+
+        else if (year == '3' )
+            System.out.print("Junior");
+
+        else
+            System.out.print("Senior");
+    }
+}
