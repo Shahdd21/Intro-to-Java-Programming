@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class Demo
+{
+    public static void main(String[] args)
+    {
+        Scanner input = new Scanner(System.in);
+
+        String two = "abc", three = "def", four = "ghi", five = "jkl", six = "mno";
+        String seven = "pqrs", eight ="tuv", nine = "wxyz";
+
+        System.out.print("Enter a character : ");
+        String s = input.next();
+
+       if(two.contains(s.toLowerCase()))
+           System.out.println("The corresponding number is" + 2);
+
+       if(three.contains(s.toLowerCase()))
+           System.out.println("The corresponding number is" + 3);
+
+       if(four.contains(s.toLowerCase()))
+           System.out.println("The corresponding number is" + 4);
+
+       if(five.contains(s.toLowerCase()))
+           System.out.println("The corresponding number is" + 5);
+
+       if(six.contains(s.toLowerCase()))
+           System.out.println("The corresponding number is" + 6);
+
+       if(seven.contains(s.toLowerCase()))
+           System.out.println("The corresponding number is" + 7);
+
+       if(eight.contains(s.toLowerCase()))
+           System.out.println("The corresponding number is" + 8);
+
+       if(nine.contains(s.toLowerCase()))
+           System.out.println("The corresponding number is" + 9);
+    }
+}
