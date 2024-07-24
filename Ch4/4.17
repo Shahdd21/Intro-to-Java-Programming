@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class Demo
+{
+    public static void main(String[] args)
+    {
+        Scanner input = new Scanner(System.in);
+
+       System.out.print("Enter a year : ");
+       String year = input.next();
+
+       System.out.print("Enter a month : ");
+       String month = input.next();
+
+        boolean leapYear = ((Integer.parseInt(year) % 4 == 0) && ((Integer.parseInt(year)) % 100 != 0)) || ((Integer.parseInt(year)) % 400 == 0);
+
+       switch(month)
+       {
+           case "Jan":
+           case "Mar":
+           case "May":
+           case "Jul":
+           case "Aug":
+           case "Oct" :
+           case "Dec":
+               System.out.print(month + " " + year + " has 31 days");
+               break;
+
+           case "Sep":
+           case "Apr":
+           case "Jun":
+           case "Nov":
+               System.out.print(month + " " + year + " has 30 days");
+               break;
+
+           case "Feb":
+               System.out.println(month +" " + year+" has "+((leapYear) ? 29 : 28) + " days");
+               break;
+       }
+
+    }
+}
