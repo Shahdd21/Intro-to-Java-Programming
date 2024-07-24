@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Demo
+{
+    public static void main(String[] args)
+    {
+       double num = 1, deno = 3, sum = 0;
+
+       while(num <= 97 && deno <= 99)
+       {
+           sum += (num/deno);
+
+           num += 2;
+           deno +=2;
+       }
+
+       System.out.print(sum);
+    }
+}
