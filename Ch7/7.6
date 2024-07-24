@@ -1,0 +1,66 @@
+import java.util.Scanner;
+
+public class Demo
+{
+    public static void main(String[] args)
+    {
+       Scanner input = new Scanner(System.in);
+       int[] primes = new int[50];
+
+       System.out.print("Enter a number to check whether it's prime or not :");
+       int n = input.nextInt();
+
+       generatePrimes(primes);
+       boolean isPrime = checkPrime(n, primes);
+
+       if(isPrime)
+           System.out.println("The number is prime");
+
+       else
+           System.out.println("The number is not prime");
+
+       System.out.println("The first 50 primes are :");
+
+       for(int e : primes)
+       {
+           System.out.print(e + " ");
+       }
+    }
+
+    public static void generatePrimes(int[] primes)
+    {
+        int cnt = 0;
+        boolean flag = true;
+
+        for(int i = 2 ; cnt < 50 ; ++i )
+        {
+            flag = true;
+
+            for(int j = 2 ; j <= i/2 ; ++j)
+            {
+                if(i % j == 0)
+                {
+                    flag = false;
+                    break;
+                }
+            }
+
+            if(flag)
+            {
+                primes[cnt] = i;
+                cnt++;
+            }
+        }
+    }
+
+    public static boolean checkPrime(int n, int[] primes)
+    {
+        for(int i = 0 ; primes[i] <= Math.sqrt(n) ; ++i)
+        {
+            if(n % primes[i] == 0)
+                return false;
+        }
+
+        return true;
+    }
+}
