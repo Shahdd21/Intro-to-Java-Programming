@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Demo
+{
+    public static void main(String[] args)
+    {
+        Scanner input = new Scanner(System.in);
+
+        /*
+        *  hrs = minutes / 60 ;
+        * days = hrs / 24;
+        * */
+
+        System.out.println("Enter the number of minutes");
+        long mins = input.nextLong();
+
+        long hrs = mins / 60 ;
+        long days = hrs /24 ;
+        long yrs = days/365 ;
+
+        long remaining = days % 365 ;
+
+        System.out.println(mins + " minutes is approximately " + yrs + " years and " + remaining + " days");
+    }
+}
