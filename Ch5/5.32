@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class Demo
+{
+    public static void main(String[] args)
+    {
+      int n1 = (int)(Math.random()*100) ;
+      Scanner input = new Scanner(System.in);
+
+      while(n1%10 == n1%100)
+      {
+          n1 = (int)(Math.random()*100) ;
+      }
+
+      System.out.print("Enter a number : ");
+      int guess = input.nextInt();
+
+      if(guess == n1)
+          System.out.println("Exact Match !");
+
+      else if (guess % 10 == n1/10 && guess/10 == n1% 10)
+          System.out.println("Matches all digits !");
+
+      else if(guess % 10 == n1/10 || guess/10 == n1% 10 || guess % 10 == n1 % 10 || guess/10 == n1/10)
+          System.out.println("Matches one digit !");
+
+      else
+          System.out.println("Sorry, no match !");
+
+      System.out.print("The lottery is " + n1);
+
+    }
+}
