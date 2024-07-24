@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+public class Demo {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter the number of values : ");
+        int n = input.nextInt();
+
+        int[] arr = new int[n];
+
+        System.out.print("Enter the values : ");
+        for(int i = 0 ; i < n ; ++i)
+            arr[i] = input.nextInt();
+
+        boolean valid = consecutive(arr);
+
+        if (valid)
+            System.out.print("The list has no consecutive fours");
+
+        else
+            System.out.print("The list has consecutive fours");
+    }
+
+    public static boolean consecutive(int[] arr)
+    {
+        int cnt = 1;
+
+      for(int i = 0 ; i < arr.length-1 ; ++i)
+      {
+          if(arr[i] == arr[i+1])
+              cnt++;
+
+          else
+              cnt = 1;
+
+          if(cnt == 4)
+              return false;
+      }
+
+      return true;
+    }
+}
