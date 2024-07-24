@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+public class Demo {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        int[] arr = new int[5];
+
+        System.out.print("Enter 5 numbers : ");
+        for (int i = 0; i < 5; ++i)
+            arr[i] = input.nextInt();
+
+        selectionSort(arr);
+
+        System.out.print("The sorted array is : ");
+        for(int i = 0 ; i < arr.length ; ++i)
+            System.out.print(arr[i] + " ");
+
+    }
+
+    public static void selectionSort(int[] arr)
+    {
+       for(int i = arr.length-1 ; i > 0 ; --i)
+       {
+           int maxElement = arr[i];
+           int maxIndex = i ;
+
+           for(int j = i-1 ; j >= 0 ; --j)
+           {
+               if(maxElement < arr[j])
+               {
+                   maxElement = arr[j] ;
+                   maxIndex = j ;
+               }
+           }
+
+           if(maxIndex != i )
+           {
+               arr[maxIndex] = arr[i] ;
+               arr[i] = maxElement ;
+           }
+       }
+    }
+
+}
