@@ -1,0 +1,49 @@
+import java.util.Scanner;
+
+public class Demo
+{
+    public static void main(String[] args)
+    {
+        /*
+        range from 0-2 for s,r,p
+        a to a+b-1
+        a =0
+        b = 3
+        * */
+      int computer = (int)(Math.random()*3) ;
+      Scanner input = new Scanner(System.in);
+
+      int cWins = 0, uWins = 0;
+
+      while(cWins <= 2 && uWins <= 2)
+      {
+          System.out.println("Enter a number from 0-2 as :\n0 is for scissor\n1 is for rock\n2 is for paper");
+          int user = input.nextInt();
+
+          if(computer == 0 && user == 2)
+              cWins++;
+
+          else if (user == 0 && computer == 2)
+              uWins++;
+
+          else if (computer == 1 && user == 0)
+              cWins++;
+
+          else if(user == 1 && computer == 0)
+              uWins++;
+
+          else if(computer == 2 && user == 1)
+              cWins++;
+
+          else if(user == 2 && computer == 1)
+              uWins++;
+      }
+
+      if(cWins > 2)
+          System.out.printf("The winner is the computer with %d wins\n", cWins);
+
+      else
+          System.out.printf("The winner is the user with %d wins\n", uWins);
+
+    }
+}
