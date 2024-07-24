@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Demo
+{
+    public static void main(String[] args)
+    {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter String one : ");
+        String str1 = input.next();
+
+        System.out.print("Enter String two : ");
+        String str2 = input.next();
+
+        if(str1.contains(str2))
+            System.out.println(str2+" is a substring of " + str1);
+
+        else
+            System.out.println(str2+" is not a substring of " + str1);
+    }
+}
