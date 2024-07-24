@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Demo
+{
+    public static void main(String[] args)
+    {
+        Scanner input = new Scanner(System.in) ;
+
+        System.out.println("Enter a number between 0 and 1000 : ");
+        int num = input.nextInt();
+
+        int sum = 0;
+
+        while (num > 0)
+        {
+            int last = num % 10 ;
+
+            sum += last ;
+
+            num /= 10 ;
+        }
+
+        System.out.println("The sum of digits is " + sum);
+    }
+}
