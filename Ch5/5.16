@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Demo
+{
+    public static void main(String[] args)
+    {
+       Scanner input = new Scanner(System.in);
+
+       System.out.print("Enter a number : ");
+       int num = input.nextInt();
+
+       int factor = 2;
+
+       System.out.print("Its factors are : ");
+       while(num > 1)
+       {
+           if(num % factor == 0)
+           {
+               System.out.print(factor + " ");
+               num /= factor;
+           }
+
+           else
+               factor++;
+       }
+    }
+}
